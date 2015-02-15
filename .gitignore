@@ -1,0 +1,7 @@
+bower_components/
+node_modules/
+.tmp/
+dist/
+.DS_Store
+.idea/
+app/styles/_icons.scss

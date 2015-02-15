@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// 这只是个容器，只管引用，不要放任何样式，请把它们都放在_开头的样式表中
+/** SASS的语法参见sass-lang.com */
+@import "variables";
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import "bootstrap";
+@import "common";
+@import "icons";
+@import "app";
