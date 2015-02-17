@@ -13,4 +13,15 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     controller: 'HomeNotFoundCtrl as vm'
   });
   $urlRouterProvider.otherwise('/notFound');
+
+  $stateProvider.state('reader', {
+    url: '/reader',
+    template: '<div ui-view></div>',
+    abstract: true
+  });
+  $stateProvider.state('reader.create', {
+    url: '/create',
+    templateUrl: 'controllers/reader/create.html',
+    controller: 'ReaderCreateCtrl as vm'
+  });
 });
