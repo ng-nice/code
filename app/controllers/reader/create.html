@@ -1,30 +1,33 @@
 <form>
   <div>
     <label for="_email">邮箱</label>
-    <input id="_email" type="text"/>
+    <input id="_email" type="text" ng-model="vm.form.email"/>
   </div>
   <div>
     <label for="_nickname">昵称</label>
-    <input id="_nickname" type="text"/>
+    <input id="_nickname" type="text" ng-model="vm.form.nickname"/>
   </div>
   <div>
     <label for="_password">密码</label>
-    <input id="_password" type="password"/>
+    <input id="_password" type="password" ng-model="vm.form.password"/>
   </div>
   <div>
     <label for="_retypedPassword">确认密码</label>
-    <input id="_retypedPassword" type="password"/>
+    <input id="_retypedPassword" type="password" ng-model="vm.retypedPassword"/>
   </div>
   <div>
     <label for="_captcha">图形验证码</label>
-    <input id="_captcha" type="text"/>
+    <input id="_captcha" type="text" ng-model="vm.form.captcha"/>
     <img src="" alt="图形验证码"/>
   </div>
   <div>
-    <input id="_accepted" type="checkbox"/>
+    <input id="_accepted" type="checkbox" ng-model="vm.accepted"/>
     <label for="_accepted">
       我已阅读并同意
       <a href>《网站服务协议》</a>
     </label>
+  </div>
+  <div>
+    <button type="submit">立即注册</button>
   </div>
 </form>
