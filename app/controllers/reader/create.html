@@ -1,7 +1,7 @@
-<form>
+<form ng-submit="vm.submit(vm.form)">
   <div>
     <label for="_email">邮箱</label>
-    <input id="_email" type="text" ng-model="vm.form.email"/>
+    <input id="_email" type="email" ng-model="vm.form.email"/>
   </div>
   <div>
     <label for="_nickname">昵称</label>

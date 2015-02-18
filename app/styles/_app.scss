@@ -3,10 +3,10 @@
 // 这里定义仅用在当前应用中的样式，但页面特有的样式不要定义在这里
 
 // inject:page:scss
-@import "../components/layout/_layout.scss";
-@import "../components/layout/footer.scss";
-@import "../components/layout/header.scss";
-@import "../components/layout/menu.scss";
-@import "../controllers/home/index.scss";
 @import "../controllers/home/notFound.scss";
+@import "../controllers/home/index.scss";
+@import "../components/layout/menu.scss";
+@import "../components/layout/header.scss";
+@import "../components/layout/footer.scss";
+@import "../components/layout/_layout.scss";
 // endinject
