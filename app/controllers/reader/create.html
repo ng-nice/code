@@ -1,31 +1,27 @@
-<form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate">
+<form ng-submit="vm.submit(vm.form)" novalidate="novalidate">
   <div>
     <label for="_email">邮箱</label>
-    <input id="_email" name="email" type="email" ng-required="true" ng-model="vm.form.email"/>
-    <ul ng-if="form.email.$dirty && form.email.$invalid">
-      <li ng-if="form.email.$error.email">无效的邮箱格式</li>
-      <li ng-if="form.email.$error.required">此项为必填项</li>
-    </ul>
+    <input id="_email" bf-field-error type="email" ng-required="true" ng-model="vm.form.email"/>
   </div>
   <div>
     <label for="_nickname">昵称</label>
-    <input id="_nickname" name="nickname" type="text" ng-required="true" ng-model="vm.form.nickname"/>
+    <input id="_nickname" type="text" ng-required="true" ng-model="vm.form.nickname"/>
   </div>
   <div>
     <label for="_password">密码</label>
-    <input id="_password" name="password" type="password" ng-required="true" ng-model="vm.form.password"/>
+    <input id="_password" type="password" ng-required="true" ng-model="vm.form.password"/>
   </div>
   <div>
     <label for="_retypedPassword">确认密码</label>
-    <input id="_retypedPassword" name="retypedPassword" type="password" ng-required="true" ng-model="vm.retypedPassword"/>
+    <input id="_retypedPassword" type="password" ng-required="true" ng-model="vm.retypedPassword"/>
   </div>
   <div>
     <label for="_captcha">图形验证码</label>
-    <input id="_captcha" name="captcha" type="text" ng-required="true" ng-model="vm.form.captcha"/>
+    <input id="_captcha" type="text" ng-required="true" ng-model="vm.form.captcha"/>
     <img src="" alt="图形验证码"/>
   </div>
   <div>
-    <input id="_accepted" name="accepted" type="checkbox" ng-model="vm.accepted"/>
+    <input id="_accepted" type="checkbox" ng-model="vm.accepted"/>
     <label for="_accepted">
       我已阅读并同意
       <a href>《网站服务协议》</a>
