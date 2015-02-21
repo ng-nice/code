@@ -1,0 +1,15 @@
+<ul ng-if="vm.items">
+  <li ng-repeat="item1 in vm.items">
+    {{item1.title}}
+    <ul ng-if="item1.items">
+      <li ng-repeat="item2 in item1.items">
+        {{item2.title}}
+        <ul ng-if="item2.items">
+          <li ng-repeat="item3 in item2.items">
+            {{item3.title}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>

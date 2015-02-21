@@ -35,5 +35,9 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: 'controllers/thread/list.html',
     controller: 'ThreadListCtrl as vm'
   });
-
+  $stateProvider.state('thread.tree', {
+    url: '/tree',
+    templateUrl: 'controllers/thread/tree.html',
+    controller: 'ThreadTreeCtrl as vm'
+  });
 });
