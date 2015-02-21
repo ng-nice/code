@@ -1,3 +1,9 @@
+<div>
+  <label for="_keyword">
+    搜索条件：
+  </label>
+  <input id="_keyword" type="text" placeholder="请输入主题、作者或发帖时间的任意部分进行筛选" ng-model="vm.filter.$"/>
+</div>
 <table class="table table-hover table-striped">
   <thead>
   <tr>
@@ -7,7 +13,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="item in vm.items">
+  <tr ng-repeat="item in vm.items | filter:vm.filter">
     <td>{{item.title}}</td>
     <td>{{item.poster}}</td>
     <td>{{item.dateCreated|date:'yyyy-MM-dd HH:mm'}}</td>
