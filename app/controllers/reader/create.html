@@ -18,7 +18,7 @@
   <div>
     <label for="_captcha">图形验证码</label>
     <input id="_captcha" type="text" bf-field-error ng-required="true" ng-model="vm.form.captcha"/>
-    <img src="" alt="图形验证码"/>
+    <img bf-captcha alt="图形验证码"/>
   </div>
   <div>
     <input id="_accepted" type="checkbox" ng-model="vm.accepted" bf-assert-same-as="true"/>
