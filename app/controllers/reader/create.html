@@ -1,4 +1,4 @@
-<form ng-submit="vm.submit(vm.form)" novalidate="novalidate">
+<form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate">
   <div>
     <label for="_email">邮箱</label>
     <input id="_email" bf-field-error type="email" ng-required="true" ng-model="vm.form.email"/>
@@ -28,6 +28,6 @@
     </label>
   </div>
   <div>
-    <button type="submit">立即注册</button>
+    <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">立即注册</button>
   </div>
 </form>
