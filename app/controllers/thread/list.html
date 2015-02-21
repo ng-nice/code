@@ -10,7 +10,7 @@
   <tr ng-repeat="item in vm.items">
     <td>{{item.title}}</td>
     <td>{{item.poster}}</td>
-    <td>{{item.dateCreated}}</td>
+    <td>{{item.dateCreated|date:'yyyy-MM-dd HH:mm'}}</td>
   </tr>
   </tbody>
 </table>
