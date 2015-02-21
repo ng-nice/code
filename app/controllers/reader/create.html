@@ -5,19 +5,19 @@
   </div>
   <div>
     <label for="_nickname">昵称</label>
-    <input id="_nickname" type="text" ng-required="true" ng-model="vm.form.nickname"/>
+    <input id="_nickname" bf-field-error type="text" ng-required="true" ng-model="vm.form.nickname"/>
   </div>
   <div>
     <label for="_password">密码</label>
-    <input id="_password" type="password" ng-required="true" ng-model="vm.form.password"/>
+    <input id="_password" bf-field-error type="password" ng-required="true" ng-model="vm.form.password"/>
   </div>
   <div>
     <label for="_retypedPassword">确认密码</label>
-    <input id="_retypedPassword" type="password" ng-required="true" ng-model="vm.retypedPassword"/>
+    <input id="_retypedPassword" bf-field-error type="password" ng-required="true" ng-model="vm.retypedPassword" bf-assert-same-as="vm.form.password"/>
   </div>
   <div>
     <label for="_captcha">图形验证码</label>
-    <input id="_captcha" type="text" ng-required="true" ng-model="vm.form.captcha"/>
+    <input id="_captcha" type="text" bf-field-error ng-required="true" ng-model="vm.form.captcha"/>
     <img src="" alt="图形验证码"/>
   </div>
   <div>
