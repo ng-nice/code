@@ -1,7 +1,12 @@
 @charset "utf-8";
 
 // 这里定义仅用在当前应用中的样式，但页面特有的样式不要定义在这里
-
+ul {
+  padding-left: 2em;
+  li {
+    list-style: none;
+  }
+}
 // inject:page:scss
 @import "../controllers/home/notFound.scss";
 @import "../controllers/home/index.scss";
