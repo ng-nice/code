@@ -1,10 +1,22 @@
 <ul ng-if="vm.items">
   <li ng-repeat="item1 in vm.items">
-    {{item1.title}}
-    <ul ng-if="item1.items">
+    <div ng-click="item1.$folded = !item1.$folded">
+      <span ng-if="item1.items">
+        <span ng-if="!item1.$folded">-</span>
+        <span ng-if="item1.$folded">+</span>
+      </span>
+      {{item1.title}}
+    </div>
+    <ul ng-if="item1.items && !item1.$folded">
       <li ng-repeat="item2 in item1.items">
-        {{item2.title}}
-        <ul ng-if="item2.items">
+        <div ng-click="item2.$folded = !item2.$folded">
+          <span ng-if="item2.items">
+            <span ng-if="!item2.$folded">-</span>
+            <span ng-if="item2.$folded">+</span>
+          </span>
+          {{item2.title}}
+        </div>
+        <ul ng-if="item2.items && !item2.$folded">
           <li ng-repeat="item3 in item2.items">
             {{item3.title}}
           </li>
