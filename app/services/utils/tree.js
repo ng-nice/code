@@ -13,6 +13,20 @@ angular.module('app').service('tree', function Tree() {
     item.$isFolded = function () {
       return this.$folded;
     };
+    var setCheckState = function(node, checked) {
+      node.$checked = checked;
+      if (node.$hasChildren()) {
+        angular.forEach(node[childrenName], function(subNode) {
+          setCheckState(subNode, checked);
+        });
+      }
+    };
+    item.$check = function() {
+      setCheckState(item, true);
+    };
+    item.$isChecked = function() {
+      return this.$checked;
+    };
   };
   this.enhance = function (items, childrenName) {
     if (angular.isUndefined(childrenName)) {
