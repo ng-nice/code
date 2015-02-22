@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('ThreadTreeCtrl', function ThreadTreeCtrl() {
+angular.module('app').controller('ThreadTreeCtrl', function ThreadTreeCtrl(tree) {
   var vm = this;
   vm.items = [
     {
@@ -44,4 +44,5 @@ angular.module('app').controller('ThreadTreeCtrl', function ThreadTreeCtrl() {
       dateCreated: '2015-02-19T15:00:00'
     }
   ];
+  tree.enhance(vm.items);
 });
