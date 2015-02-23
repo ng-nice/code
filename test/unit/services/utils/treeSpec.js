@@ -89,4 +89,11 @@ describe("tree service >", function () {
     findById(112).$check();
     expect(findById(11).$isIndeterminate()).toBeFalsy();
   });
+  it('$checkToggle会切换当前节点的选中状态', function() {
+    var node = findById(111);
+    node.$checkToggle();
+    expect(node.$isChecked()).toBeTruthy();
+    node.$checkToggle();
+    expect(node.$isChecked()).toBeFalsy();
+  });
 });
