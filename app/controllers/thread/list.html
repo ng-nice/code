@@ -13,10 +13,14 @@
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="item in vm.items | filter:vm.filter">
+  <tr ng-repeat="item in vm.items | filter:vm.filter | page:vm.page.index:vm.page.size">
     <td>{{item.title}}</td>
     <td>{{item.poster}}</td>
     <td>{{item.dateCreated|date:'yyyy-MM-dd HH:mm'}}</td>
   </tr>
   </tbody>
 </table>
+<label>
+  页号：
+  <input type="number" ng-model="vm.page.index"/>
+</label>

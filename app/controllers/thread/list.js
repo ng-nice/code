@@ -21,4 +21,8 @@ angular.module('app').controller('ThreadListCtrl', function ThreadListCtrl() {
       dateCreated: '2015-02-18T15:00:00'
     });
   }
+  vm.page = {
+    index: 0,
+    size: 5
+  };
 });

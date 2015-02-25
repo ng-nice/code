@@ -1,4 +1,4 @@
-describe("tree service >", function () {
+describe("service > tree >", function () {
   beforeEach(module('app'));
   var tree;
   // 这里可以注入服务或控制器，注入器会忽略名称两端的下划线
