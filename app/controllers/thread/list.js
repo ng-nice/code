@@ -14,15 +14,17 @@ angular.module('app').controller('ThreadListCtrl', function ThreadListCtrl() {
       dateCreated: '2015-02-19T15:00:00'
     }
   ];
-  for (var i = 0; i < 10; ++i) {
+  for (var i = 0; i < 200; ++i) {
     vm.items.push({
       title: '主题' + i,
       poster: 'user' + i,
       dateCreated: '2015-02-18T15:00:00'
     });
   }
+  vm.activePage = 0;
   vm.page = {
-    index: 0,
-    size: 5
+    size: 5,
+    numPages: 5,
+    total: vm.items.length
   };
 });
