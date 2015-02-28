@@ -45,4 +45,33 @@ angular.module('app').controller('ThreadTreeCtrl', function ThreadTreeCtrl(tree)
     }
   ];
   tree.enhance(vm.items);
+  vm.test = function() {
+    vm.items.push({
+      id: 3,
+      title: '3',
+      poster: '雪狼',
+      dateCreated: '2015-02-19T00:00:03',
+      items: [
+        {
+          id: 31,
+          title: '31',
+          poster: '雪狼',
+          dateCreated: '2015-02-19T00:00:03'
+        },
+        {
+          id: 32,
+          title: '32',
+          poster: '雪狼',
+          dateCreated: '2015-02-19T00:00:03'
+        }
+      ]
+    });
+    vm.items[0].items.push({
+      id: 13,
+      title: '13',
+      poster: '雪狼',
+      dateCreated: '2015-02-19T00:00:03'
+    });
+    tree.enhance(vm.items);
+  };
 });

@@ -1,39 +1,20 @@
-<ul ng-if="vm.items">
-  <li ng-repeat="item1 in vm.items">
+<ul>
+  <li bf-template="vm.items" ng-repeat="node in $dataSource">
     <div>
-      <span ng-if="item1.$hasChildren()" ng-click="item1.$foldToggle()">
-        <span ng-if="!item1.$isFolded()">-</span>
-        <span ng-if="item1.$isFolded()">+</span>
+      <span ng-if="node.$hasChildren()" ng-click="node.$foldToggle()">
+        <span ng-if="!node.$isFolded()">-</span>
+        <span ng-if="node.$isFolded()">+</span>
       </span>
       <label>
-        <input type="checkbox" bf-check-indeterminate="item1.$isIndeterminate()" ng-model="item1.$checked"
-               ng-change="item1.$setCheckState(item1.$checked)"/>
-        {{item1.title}}
+        <input type="checkbox" bf-check-indeterminate="node.$isIndeterminate()" ng-model="node.$checked"
+               ng-change="node.$setCheckState(node.$checked)"/>
+        {{node.title}} - {{node.poster}}({{node.dateCreated|date}})
       </label>
     </div>
-    <ul ng-if="item1.$hasChildren() && !item1.$isFolded()">
-      <li ng-repeat="item2 in item1.items">
-        <div>
-          <span ng-if="item2.$hasChildren()" ng-click="item2.$foldToggle()">
-            <span ng-if="!item2.$isFolded()">-</span>
-            <span ng-if="item2.$isFolded()">+</span>
-          </span>
-          <label>
-            <input type="checkbox" bf-check-indeterminate="item2.$isIndeterminate()" ng-model="item2.$checked"
-                   ng-change="item2.$setCheckState(item2.$checked)"/>
-            {{item2.title}}
-          </label>
-        </div>
-        <ul ng-if="item2.$hasChildren() && !item2.$isFolded()">
-          <li ng-repeat="item3 in item2.items">
-            <label>
-              <input type="checkbox" bf-check-indeterminate="item3.$isIndeterminate()" ng-model="item3.$checked"
-                     ng-change="item3.$setCheckState(item3.$checked)"/>
-              {{item3.title}}
-            </label>
-          </li>
-        </ul>
-      </li>
+    <ul ng-if="node.$hasChildren() && !node.$isFolded()">
+      <li bf-recurse="node.items"></li>
     </ul>
   </li>
 </ul>
+
+<button type="button" ng-click="vm.test()">添加测试数据</button>
