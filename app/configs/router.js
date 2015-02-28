@@ -40,4 +40,9 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: 'controllers/thread/tree.html',
     controller: 'ThreadTreeCtrl as vm'
   });
+  $stateProvider.state('thread.show', {
+    url: '/:id/show?title&poster',
+    templateUrl: 'controllers/thread/show.html',
+    controller: 'ThreadShowCtrl as vm'
+  });
 });

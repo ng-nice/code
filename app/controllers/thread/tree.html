@@ -8,8 +8,11 @@
       <label>
         <input type="checkbox" bf-check-indeterminate="node.$isIndeterminate()" ng-model="node.$checked"
                ng-change="node.$setCheckState(node.$checked)"/>
-        {{node.title}} - {{node.poster}}({{node.dateCreated|date}})
+        {{node.title}}
+        -
+        {{node.poster}}({{node.dateCreated|date}})
       </label>
+      <a ui-sref="thread.show({id: node.id, title: node.title, poster: node.poster})">查看</a>
     </div>
     <ul ng-if="node.$hasChildren() && !node.$isFolded()">
       <li bf-recurse="node.items"></li>
