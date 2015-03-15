@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
+  $stateProvider.state('default', {
+    url: '',
+    templateUrl: 'controllers/home/index.html',
+    controller: 'HomeIndexCtrl as vm'
+  });
   $stateProvider.state('home', {
     url: '/',
     templateUrl: 'controllers/home/index.html',
@@ -23,6 +28,11 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     url: '/create',
     templateUrl: 'controllers/reader/create.html',
     controller: 'ReaderCreateCtrl as vm'
+  });
+  $stateProvider.state('reader.list', {
+    url: '/list',
+    templateUrl: 'controllers/reader/list.html',
+    controller: 'ReaderListCtrl as vm'
   });
 
   $stateProvider.state('thread', {
