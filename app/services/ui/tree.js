@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('app').service('tree', function Tree() {
-  var self = this;
   var enhanceItem = function (item, childrenName, parent) {
     if (parent) {
       item.$parent = parent;
