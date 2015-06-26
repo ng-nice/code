@@ -2,6 +2,7 @@
 
 var restify = require('restify');
 var resourceMixin = require('./utils/resourceMixin');
+var security = require('./security');
 
 var server = restify.createServer({
   name: 'mock-server',
@@ -23,6 +24,12 @@ server.pre(function (req, res, next) {
   res.cache({maxAge: 0});
   next();
 });
+server.pre(security.preFilter);
+
+server.post('/login', security.login);
+server.post('/logout', security.logout);
+server.post('/clients', security.createClient);
+server.del('/clients/:id', security.removeClient);
 
 require('./routers')(server);
 

@@ -2,10 +2,10 @@
 angular.module('app').factory('AuthHandler', function AuthHandlerFactory($q, $injector) {
   return {
     responseError: function (rejection) {
+      var ui = $injector.get('ui');
       // 如果服务器返回了401 unauthorized，那么就表示需要登录
       if (rejection.status === 401) {
-        var password = prompt('请输入密码：');
-        if (password) {
+        ui.promptPassword('请输入密码：').then(function (password) {
           var Login = $injector.get('Login');
           var $http = $injector.get('$http');
           return Login.save({
@@ -14,9 +14,9 @@ angular.module('app').factory('AuthHandler', function AuthHandlerFactory($q, $in
           }).$promise.then(function () {
               return $http(rejection.config);
             });
-        } else {
+        }, function () {
           return $q.reject(rejection);
-        }
+        });
       } else {
         // 其它错误不用管，留给其它interceptor去处理
         return $q.reject(rejection);

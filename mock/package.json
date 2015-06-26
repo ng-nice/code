@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.6.0",
+    "require-dir": "^0.3.0",
+    "restify": "^3.0.2"
+  }
 }

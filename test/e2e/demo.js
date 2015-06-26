@@ -1,17 +1,20 @@
 'use strict';
 
+var HomePage = require('./pages/HomePage');
+
 describe('e2e范例，如果修改了首页，请修改本测试', function () {
-
+  var homePage;
   beforeEach(function () {
-    browser.get('http://localhost:5000');
+    homePage = new HomePage();
+    homePage.get();
   });
 
-  it('默认的标题是WeBank', function() {
-    expect(browser.getTitle()).toBe('Showcase');
+  it('默认的标题是Showcase', function() {
+    expect(homePage.title()).toBe('Showcase');
   });
-  it('默认的Home页内容', function () {
-    expect(element(by.binding('vm.name')).getText()).toBe('Hello, World');
-    element(by.model('vm.name')).clear().sendKeys('Ketty');
-    expect(element(by.binding('vm.name')).getText()).toBe('Hello, Ketty');
+  it('输入用户名后应该回显', function() {
+    expect(homePage.nameEcho.getText()).toBe('Hello,');
+    homePage.name.sendKeys('test');
+    expect(homePage.nameEcho.getText()).toBe('Hello,test');
   });
 });

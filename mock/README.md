@@ -1,5 +1,3 @@
-这里是一组mock数据和mock行为，它将用于开发和单元测试阶段。
+详细api文档参见 <http://mcavage.me/node-restify/>
 
-在开发阶段，它将为内置的mock服务器提供数据。
-
-在单元测试阶段，它将自动作为$httpBackend的数据源。
+这里是一组mock数据和mock行为，它可以在开发阶段快速建立一个伪服务器。

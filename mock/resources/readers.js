@@ -4,7 +4,6 @@ var items = [
     id: 'u1',
     username: 'zhangsan',
     nickname: '张三',
-    password: 'zhangsanpass',
     contacts: [
       {
         id: 'c1',
@@ -21,7 +20,6 @@ var items = [
   {
     id: 'u2',
     username: 'lisi',
-    password: 'lisipass',
     nickname: '李四13'
   }
 ];
