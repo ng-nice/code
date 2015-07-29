@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('ThreadListCtrl', function ThreadListCtrl() {
+angular.module('app').controller('ThreadListController', function ThreadListController() {
   var vm = this;
   vm.items = [
     {

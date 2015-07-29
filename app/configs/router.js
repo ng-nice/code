@@ -4,18 +4,18 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('default', {
     url: '',
     templateUrl: 'controllers/home/index.html',
-    controller: 'HomeIndexCtrl as vm'
+    controller: 'HomeIndexController as vm'
   });
   $stateProvider.state('home', {
     url: '/',
     templateUrl: 'controllers/home/index.html',
-    controller: 'HomeIndexCtrl as vm'
+    controller: 'HomeIndexController as vm'
   });
 
   $stateProvider.state('notFound', {
     url: '/notFound',
     templateUrl: 'controllers/home/notFound.html',
-    controller: 'HomeNotFoundCtrl as vm'
+    controller: 'HomeNotFoundController as vm'
   });
   $urlRouterProvider.otherwise('/notFound');
 
@@ -27,12 +27,12 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('reader.create', {
     url: '/create',
     templateUrl: 'controllers/reader/create.html',
-    controller: 'ReaderCreateCtrl as vm'
+    controller: 'ReaderCreateController as vm'
   });
   $stateProvider.state('reader.list', {
     url: '/list',
     templateUrl: 'controllers/reader/list.html',
-    controller: 'ReaderListCtrl as vm'
+    controller: 'ReaderListController as vm'
   });
 
   $stateProvider.state('thread', {
@@ -43,16 +43,16 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('thread.list', {
     url: '/list',
     templateUrl: 'controllers/thread/list.html',
-    controller: 'ThreadListCtrl as vm'
+    controller: 'ThreadListController as vm'
   });
   $stateProvider.state('thread.tree', {
     url: '/tree',
     templateUrl: 'controllers/thread/tree.html',
-    controller: 'ThreadTreeCtrl as vm'
+    controller: 'ThreadTreeController as vm'
   });
   $stateProvider.state('thread.show', {
     url: '/:id/show?title&poster',
     templateUrl: 'controllers/thread/show.html',
-    controller: 'ThreadShowCtrl as vm'
+    controller: 'ThreadShowController as vm'
   });
 });

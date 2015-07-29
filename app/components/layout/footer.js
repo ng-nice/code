@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('LayoutFooterCtrl', function LayoutFooterCtrl() {
+angular.module('app').controller('LayoutFooterController', function LayoutFooterController() {
   var vm = this;
 
 });
@@ -9,6 +9,6 @@ angular.module('app').directive('layoutFooter', function LayoutFooter() {
     restrict: 'EA',
     scope: {},
     templateUrl: 'components/layout/footer.html',
-    controller: 'LayoutFooterCtrl as vm'
+    controller: 'LayoutFooterController as vm'
   };
 });

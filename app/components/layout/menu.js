@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('LayoutMenuCtrl', function LayoutMenuCtrl() {
+angular.module('app').controller('LayoutMenuController', function LayoutMenuController() {
   var vm = this;
 });
 angular.module('app').directive('layoutMenu', function LayoutMenu() {
@@ -8,6 +8,6 @@ angular.module('app').directive('layoutMenu', function LayoutMenu() {
     restrict: 'EA',
     scope: {},
     templateUrl: 'components/layout/menu.html',
-    controller: 'LayoutMenuCtrl as vm'
+    controller: 'LayoutMenuController as vm'
   };
 });

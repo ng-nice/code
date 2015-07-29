@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('ReaderCreateCtrl', function ReaderCreateCtrl(Reader) {
+angular.module('app').controller('ReaderCreateController', function ReaderCreateController(Reader) {
   var vm = this;
   vm.submit = function (form) {
     Reader.save(form,

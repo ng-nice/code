@@ -4,5 +4,4 @@ node_modules/
 dist/
 .DS_Store
 .idea/
-app/styles/_icons.scss
 *.bak

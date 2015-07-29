@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('app').controller('HomeIndexCtrl', function HomeIndexCtrl() {
+angular.module('app').controller('HomeIndexController', function HomeIndexController() {
   var vm = this;
 });

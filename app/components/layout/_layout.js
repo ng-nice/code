@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('AppLayoutCtrl', function AppLayoutCtrl() {
+angular.module('app').controller('AppLayoutController', function AppLayoutController() {
   var vm = this;
 });
 angular.module('app').directive('appLayout', function appLayout() {
@@ -8,6 +8,6 @@ angular.module('app').directive('appLayout', function appLayout() {
     restrict: 'EA',
     scope: {},
     templateUrl: 'components/layout/_layout.html',
-    controller: 'AppLayoutCtrl as vm'
+    controller: 'AppLayoutController as vm'
   };
 });

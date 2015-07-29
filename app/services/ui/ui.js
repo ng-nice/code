@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('UiPromptCtrl', function UiPromptCtrl($scope) {
+angular.module('app').controller('UiPromptController', function UiPromptController($scope) {
   var vm = this;
   vm.submit = function () {
     if (vm.result) {
@@ -16,7 +16,7 @@ angular.module('app').service('ui', function Ui($modal, $rootScope) {
     scope.secret = secret;
     var modal = $modal.open({
       templateUrl: 'services/ui/prompt.html',
-      controller: 'UiPromptCtrl as vm',
+      controller: 'UiPromptController as vm',
       size: 'sm',
       scope: scope
     });

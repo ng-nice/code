@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('LayoutHeaderCtrl', function LayoutHeaderCtrl() {
+angular.module('app').controller('LayoutHeaderController', function LayoutHeaderController() {
   var vm = this;
 });
 
@@ -9,6 +9,6 @@ angular.module('app').directive('layoutHeader', function LayoutHeader() {
     restrict: 'EA',
     scope: {},
     templateUrl: 'components/layout/header.html',
-    controller: 'LayoutHeaderCtrl as vm'
+    controller: 'LayoutHeaderController as vm'
   };
 });
