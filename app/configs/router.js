@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
+angular.module('com.ngnice.app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('default', {
     url: '',
     templateUrl: 'controllers/home/index.html',

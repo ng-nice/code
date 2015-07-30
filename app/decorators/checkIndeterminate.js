@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfCheckIndeterminate', function bfCheckIndeterminate() {
+angular.module('com.ngnice.app').directive('bfCheckIndeterminate', function bfCheckIndeterminate() {
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {

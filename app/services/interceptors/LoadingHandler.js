@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').factory('LoadingHandler', function LoadingHandlerFactory($rootScope, $q) {
+angular.module('com.ngnice.app').factory('LoadingHandler', function LoadingHandlerFactory($rootScope, $q) {
   var LoadingHandler = {};
   var ref = 0;
 

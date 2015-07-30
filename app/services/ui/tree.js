@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').service('tree', function Tree() {
+angular.module('com.ngnice.app').service('tree', function Tree() {
   var enhanceItem = function (item, childrenName, parent) {
     if (parent) {
       item.$parent = parent;

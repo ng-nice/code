@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfTemplate', function bfTemplate() {
+angular.module('com.ngnice.app').directive('bfTemplate', function bfTemplate() {
   return {
     restrict: 'A',
     priority: 2000,

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').filter('page', function () {
+angular.module('com.ngnice.app').filter('page', function () {
   return function (input, page, pageSize) {
     if (!input) {
       return input;

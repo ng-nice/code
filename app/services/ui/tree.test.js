@@ -1,5 +1,5 @@
 describe("service > tree >", function () {
-  beforeEach(module('app'));
+  beforeEach(module('com.ngnice.app'));
   var tree;
   // 这里可以注入服务或控制器，注入器会忽略名称两端的下划线
   beforeEach(inject(function (_tree_) {

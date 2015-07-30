@@ -1,7 +1,7 @@
 'use strict';
 
 describe('checkIndeterminate指令 >', function () {
-  beforeEach(module('app'));
+  beforeEach(module('com.ngnice.app'));
   var $compile;
   var $rootScope;
   beforeEach(inject(function (_$compile_, _$rootScope_) {

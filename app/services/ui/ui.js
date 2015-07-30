@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('UiPromptController', function UiPromptController($scope) {
+angular.module('com.ngnice.app').controller('UiPromptController', function UiPromptController($scope) {
   var vm = this;
   vm.submit = function () {
     if (vm.result) {
@@ -8,7 +8,7 @@ angular.module('app').controller('UiPromptController', function UiPromptControll
     }
   };
 });
-angular.module('app').service('ui', function Ui($modal, $rootScope) {
+angular.module('com.ngnice.app').service('ui', function Ui($modal, $rootScope) {
   this.prompt = function (message, defaultValue, title, secret) {
     var scope = $rootScope.$new(true);
     scope.title = title || '提问';

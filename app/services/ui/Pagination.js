@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').factory('Pagination', function PaginationFactory() {
+angular.module('com.ngnice.app').factory('Pagination', function PaginationFactory() {
   // angular will store the `Pagination` as a singleton
   function BasePage(pagination) {
     this.pagination = pagination;

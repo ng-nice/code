@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfCaptcha', function bfCaptcha() {
+angular.module('com.ngnice.app').directive('bfCaptcha', function bfCaptcha() {
   return {
     restrict: 'A',
     link: function (scope, element) {

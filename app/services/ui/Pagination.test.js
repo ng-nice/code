@@ -1,7 +1,7 @@
 'use strict';
 
 describe('service > Pagination >', function() {
-  beforeEach(module('app'));
+  beforeEach(module('com.ngnice.app'));
   var Pagination;
   beforeEach(inject(function(_Pagination_) {
     Pagination = _Pagination_;

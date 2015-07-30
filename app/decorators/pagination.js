@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfPagination', function bfPagination(Pagination) {
+angular.module('com.ngnice.app').directive('bfPagination', function bfPagination(Pagination) {
   return {
     restrict: 'A',
     require: 'ngModel',

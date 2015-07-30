@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('app').controller('AppLayoutController', function AppLayoutController() {
+angular.module('com.ngnice.app').controller('AppLayoutController', function AppLayoutController() {
   var vm = this;
 });
-angular.module('app').directive('appLayout', function appLayout() {
+angular.module('com.ngnice.app').directive('appLayout', function appLayout() {
   return {
     restrict: 'EA',
     scope: {},

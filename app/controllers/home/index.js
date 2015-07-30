@@ -1,5 +1,6 @@
 'use strict';
 
-angular.module('app').controller('HomeIndexController', function HomeIndexController() {
+angular.module('com.ngnice.app').controller('HomeIndexController', function HomeIndexController() {
   var vm = this;
+  vm.name = 'world';
 });

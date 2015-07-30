@@ -1,7 +1,7 @@
 'use strict';
 
 describe('filter > page >', function () {
-  beforeEach(module('app'));
+  beforeEach(module('com.ngnice.app'));
   var pageFilter;
   beforeEach(inject(function (_pageFilter_) {
     pageFilter = _pageFilter_;

@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('app').controller('LayoutHeaderController', function LayoutHeaderController() {
+angular.module('com.ngnice.app').controller('LayoutHeaderController', function LayoutHeaderController() {
   var vm = this;
 });
 
-angular.module('app').directive('layoutHeader', function LayoutHeader() {
+angular.module('com.ngnice.app').directive('layoutHeader', function LayoutHeader() {
   return {
     restrict: 'EA',
     scope: {},

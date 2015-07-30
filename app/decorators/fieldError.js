@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfFieldError', function bfFieldError($compile) {
+angular.module('com.ngnice.app').directive('bfFieldError', function bfFieldError($compile) {
   return {
     restrict: 'A',
     require: 'ngModel',

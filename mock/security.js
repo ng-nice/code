@@ -11,7 +11,7 @@ var permissions = {
 };
 
 var needAuthorize = function(req) {
-  return tokens.get(req.header.access_token);
+  return tokens.lookup(req.header.access_token);
 };
 
 var isAccessible = function(req) {

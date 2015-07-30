@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').constant('api', {
+angular.module('com.ngnice.app').constant('api', {
   root: '/api',
   apiOf: function(path) {
     if (!path.match('^/')) {

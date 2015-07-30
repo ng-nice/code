@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').controller('ThreadTreeController', function ThreadTreeController(tree) {
+angular.module('com.ngnice.app').controller('ThreadTreeController', function ThreadTreeController(tree) {
   var vm = this;
   vm.items = [
     {

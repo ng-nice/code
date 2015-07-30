@@ -6,7 +6,7 @@
 
 'use strict';
 
-angular.module('app').animation('.ease', function () {
+angular.module('com.ngnice.app').animation('.ease', function () {
   return {
     // 创建节点时触发
     enter: function (element, done) {

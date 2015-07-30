@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').factory('AuthHandler', function AuthHandlerFactory($q, $injector) {
+angular.module('com.ngnice.app').factory('AuthHandler', function AuthHandlerFactory($q, $injector) {
   return {
     responseError: function (rejection) {
       var ui = $injector.get('ui');

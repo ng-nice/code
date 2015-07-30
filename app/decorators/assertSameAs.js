@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfAssertSameAs', function bfAssertSameAs() {
+angular.module('com.ngnice.app').directive('bfAssertSameAs', function bfAssertSameAs() {
   return {
     restrict: 'A',
     require: 'ngModel',

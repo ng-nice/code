@@ -1,3 +1,8 @@
-.layout-footer {
-
+layout-footer {
+  footer {
+    text-align: center;
+    margin-top: $padding-large-horizontal;
+    padding-top: $padding-small-vertical;
+    border-top: 1px solid $gray-lighter;
+  }
 }

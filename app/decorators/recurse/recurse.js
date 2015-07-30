@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('bfRecurse', function bfRecurse($compile) {
+angular.module('com.ngnice.app').directive('bfRecurse', function bfRecurse($compile) {
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
