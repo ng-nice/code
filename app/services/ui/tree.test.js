@@ -1,3 +1,5 @@
+'use strict';
+
 describe("service > tree >", function () {
   beforeEach(module('com.ngnice.app'));
   var tree;
